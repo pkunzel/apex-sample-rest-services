@@ -90,6 +90,13 @@ page 404 (
         messages {
             whenNoDataFound: No data found. Use the Process Data & Send Report button to generate data.
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         advanced {
             savedReportMappingIdentifier: 20000899968203929
         }

@@ -88,6 +88,13 @@ page 307 (
         pagination {
             type: rowRangesXToY
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         componentAdvanced {
             maxRowsPerPageInSelector: 14
         }

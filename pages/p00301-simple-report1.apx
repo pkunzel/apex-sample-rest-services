@@ -87,6 +87,13 @@ page 301 (
         messages {
             whenNoDataFound: No data found.
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         advanced {
             savedReportMappingIdentifier: 9771984160812996
         }

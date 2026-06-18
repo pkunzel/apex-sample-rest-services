@@ -373,36 +373,6 @@ page 2 (
         }
     )
 
-    validation p2-base-url-not-null (
-        name: P2_BASE_URL not null
-        execution {
-            sequence: 10
-        }
-        validation {
-            type: itemIsNotNull
-            item: P2_BASE_URL
-        }
-        error {
-            errorMessage: #LABEL# must have a value.
-            associatedItem: @P2_BASE_URL
-        }
-    )
-
-    validation p2-schema-is-not-null (
-        name: P2_SCHEMA is not null
-        execution {
-            sequence: 20
-        }
-        validation {
-            type: itemIsNotNull
-            item: P2_SCHEMA
-        }
-        error {
-            errorMessage: #LABEL# must have a value.
-            associatedItem: @P2_SCHEMA
-        }
-    )
-
     process persist-user-data (
         name: Persist User Data
         type: executeCode

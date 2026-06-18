@@ -102,6 +102,13 @@ page 406 (
         messages {
             whenNoDataFound: Please enter keywords to search for movies.
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         advanced {
             savedReportMappingIdentifier: 10959547933966107
         }

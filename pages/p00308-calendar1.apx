@@ -74,9 +74,6 @@ page 308 (
             type: sqlQuery
             sqlQuery:
                 ```sql
-                
-                
-                
                 select  id,
                         project,
                         task_name,

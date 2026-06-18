@@ -122,6 +122,7 @@ page 201 (
                   from #APEX$SOURCE_DATA# dept
                   join eba_demo_rest_employeecustom  n
                     on n.deptno = dept.deptno
+                order by 1
                 ```
         }
         layout {
@@ -137,6 +138,13 @@ page 201 (
         }
         pagination {
             type: rowRangesXToY
+        }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
         }
         advanced {
             savedReportMappingIdentifier: 9486652586416939

@@ -62,6 +62,13 @@ page 402 (
         pagination {
             type: rowRangesXToY
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         advanced {
             savedReportMappingIdentifier: 11883971485490565
         }

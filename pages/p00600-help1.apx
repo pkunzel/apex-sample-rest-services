@@ -58,6 +58,7 @@ page 600 (
                        'Oracle' vendor
                   from apex_applications aa
                  where aa.application_id = :APP_ID
+                order by 1 
                 ```
         }
         layout {
@@ -99,6 +100,9 @@ page 600 (
             accessibility {
                 valueIdentifiesRow: true
             }
+            sorting {
+                sortable: false
+            }
         )
 
         column PAGES (
@@ -110,6 +114,9 @@ page 600 (
             layout {
                 sequence: 20
             }
+            sorting {
+                sortable: false
+            }
         )
 
         column VENDOR (
@@ -120,6 +127,9 @@ page 600 (
             }
             layout {
                 sequence: 30
+            }
+            sorting {
+                sortable: false
             }
         )
 

@@ -51,7 +51,6 @@ app SAMPLE-REST-SERVICES (
         allowFeedback: true
     }
     advanced {
-        modernizeApp: true
         copyrightBanner:
             ```
             Name: #APP_NAME#

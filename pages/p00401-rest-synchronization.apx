@@ -141,6 +141,13 @@ page 401 (
         messages {
             whenNoDataFound: Table contains no data yet. Please click the Synchronize Data button.
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         advanced {
             savedReportMappingIdentifier: 7668113893224610
         }

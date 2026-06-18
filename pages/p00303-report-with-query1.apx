@@ -106,6 +106,13 @@ page 303 (
         pagination {
             type: rowRangesXToY
         }
+        searchBar {
+            rowsPerPageSelector: true
+        }
+        actionsMenu {
+            rowsPerPage: false
+            savePublicReport: true
+        }
         advanced {
             savedReportMappingIdentifier: 10874045825643552
         }

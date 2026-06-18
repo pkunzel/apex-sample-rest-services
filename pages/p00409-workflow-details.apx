@@ -1011,9 +1011,17 @@ page 409 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
             executeValidations: false
         }
+
+        triggerAction native-dialog-cancel (
+            action: cancelDialog
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button cancel-activity-audit (
@@ -1029,9 +1037,21 @@ page 409 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
             executeValidations: false
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @activity-audit
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button cancel-edit-variable (
@@ -1047,9 +1067,32 @@ page 409 (
             templateOptions: #DEFAULT#
         }
         behavior {
-            action: definedByDynamicAction
+            action: triggerAction
             executeValidations: false
         }
+
+        triggerAction native-close-region (
+            action: closeRegion
+            affectedElements {
+                selectionType: region
+                region: @edit-variable
+            }
+            execution {
+                sequence: 20
+            }
+        )
+
+        triggerAction native-set-value (
+            action: setValue
+            affectedElements {
+                selectionType: items
+                items: P409_NEW_VALUE
+            }
+            execution {
+                sequence: 10
+            }
+        )
+
     )
 
     button resume (
@@ -1272,89 +1315,6 @@ page 409 (
             }
             execution {
                 sequence: 20
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction cancel-activity-audit (
-        name: Cancel Activity Audit
-        execution {
-            sequence: 20
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel-activity-audit
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @activity-audit
-            }
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction cancel-dialog (
-        name: Cancel Dialog
-        execution {
-            sequence: 50
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel
-        }
-
-        action native-dialog-cancel (
-            action: cancelDialog
-            execution {
-                sequence: 10
-                fireOnInit: false
-            }
-        )
-
-    )
-
-    dynamicAction cancel-edit-variable (
-        name: Cancel Edit Variable
-        execution {
-            sequence: 40
-        }
-        when {
-            event: click
-            selectionType: button
-            button: @cancel-edit-variable
-        }
-
-        action native-close-region (
-            action: closeRegion
-            affectedElements {
-                selectionType: region
-                region: @edit-variable
-            }
-            execution {
-                sequence: 20
-                fireOnInit: false
-            }
-        )
-
-        action native-set-value (
-            action: setValue
-            affectedElements {
-                selectionType: items
-                items: P409_NEW_VALUE
-            }
-            execution {
-                sequence: 10
                 fireOnInit: false
             }
         )
